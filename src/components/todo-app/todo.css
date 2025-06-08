@@ -26,20 +26,16 @@
     padding: 10px 15px;
 }
 .todo-app-item-buttons {
-    border: solid 2px greenyellow;
-    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
 }
 .todo-app-item-button {
-    border-radius: 50%;
+    border: none;
     width: 30px;
     height: 30px;
     background-color: white;
 }
-
-.todo-app-item-button.delete {
-    border: solid 2px salmon;
-}
-
-.todo-app-item-button.edit {
-    border: solid 2px rgb(112, 194, 221);
+.todo-app-item-button:hover {
+    opacity: 50%;
 }
