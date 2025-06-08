@@ -4,7 +4,7 @@ export default function ToDoItem() {
     return (
         <div className='todo-app-item'>
             <input type="checkbox" id="todo1" name="todo1" value="Bike" />
-            <label for="todo1"> Build todo app</label>
+            <label htmlFor="todo1"> Build todo app</label>
 
             <div className="todo-app-item-buttons">
                 <button className="todo-app-item-button delete">
