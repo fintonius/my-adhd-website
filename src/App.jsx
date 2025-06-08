@@ -1,5 +1,5 @@
 
-import Todo from './components/todo-app/Todo'
+import TodoApp from './components/todo-app/TodoApp'
 
 export default function App() {
 
@@ -8,7 +8,7 @@ export default function App() {
     <>
     <main>
         <h1>Welcome to my ADHD website</h1>
-        <Todo />
+        <TodoApp />
       </main>
     </>
   )

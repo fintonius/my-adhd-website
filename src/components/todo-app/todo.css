@@ -1,10 +1,45 @@
 #todo-app {
+    padding: 10px;
     border: solid 3px salmon;
     border-radius: 15px;
     width: 80%;
     max-width: 400px;
 }
+.todo-app-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+}
+.todo-app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-app-item {
+    border: solid 3px blue;
+    border-radius: 10px ;
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 15px;
+}
+.todo-app-item-buttons {
+    border: solid 2px greenyellow;
+    align-self: flex-end;
+}
+.todo-app-item-button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
 
-#todo-app > h1 {
-    background-color: red;
+.todo-app-item-button.delete {
+    border: solid 2px salmon;
+}
+
+.todo-app-item-button.edit {
+    border: solid 2px rgb(112, 194, 221);
 }
