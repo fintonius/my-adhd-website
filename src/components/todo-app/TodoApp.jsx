@@ -2,7 +2,7 @@ import React from 'react'
 import './todo.css'
 import ToDoItem from './ToDoItem'
 
-// I think there's a slight "chicken and egge" scenario with 
+// I think there's a slight "chicken and egg" scenario with 
 // using local storage and probably React state to manage the 
 // data where the todo lists are stored. What I think might be the
 // most logical structure is on the initial app load a useEffect 
