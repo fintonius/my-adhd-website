@@ -1,10 +1,10 @@
 import TrashCan from "../../assets/icons/TrashCan"
 
-export default function ToDoItem() {
+export default function ToDoItem({todoText}) {
     return (
         <div className='todo-app-item'>
             <input type="checkbox" id="todo1" name="todo1" value="Bike" />
-            <label htmlFor="todo1"> Build todo app</label>
+            <label htmlFor="todo1">{todoText}</label>
 
             <div className="todo-app-item-buttons">
                 <button className="todo-app-item-button delete">
