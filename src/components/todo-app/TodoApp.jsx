@@ -14,6 +14,7 @@ import ToDoItem from './ToDoItem'
 // Does pushing the info to local storage cause a rerender of the App?
 
 export default function TodoApp() {
+    
     const [toDoList, setToDoList] = React.useState([])
     const [hasLoaded, setHasLoaded] = React.useState(false)
     const [newToDo, setnewToDo] = React.useState(false)
@@ -39,13 +40,36 @@ export default function TodoApp() {
     }
 
     function addNewToDo(formData) {
-        const text = formData.get('todo')        
-        setToDoList((prevList) => [...prevList, text ])
+        let uuid = self.crypto.randomUUID();
+        console.log(uuid); 
+         
+        const todo = {
+            message: formData.get('todo'),
+            id: uuid
+        }       
+        setToDoList((prevList) => [...prevList, todo])
         setnewToDo(!newToDo)
     }
 
+    function deleteToDo(id) {
+        setToDoList((prevList) => {
+           return prevList.filter((todo) => todo.id !== id)
+        })
+        console.log('updated todo list', toDoList)
+    }
+
+    function editToDo(id) {
+        console.log(`you're not so bad todo, you just need to change a little`, id)
+    }
+
     const listToRender = toDoList.map((todo) => {
-        return <ToDoItem todoText={todo}/>
+        return <ToDoItem 
+          key={todo.id}
+          todoText={todo.message}
+          todoId={todo.id}
+          deleteToDo={deleteToDo}
+          editToDo={editToDo}        
+        />
     })
 
     const newToDoForm = <form 
